@@ -1,12 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Retro</title>
+    <!-- tailwind Daisy UI  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custon css -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    
+
+
+
+<body class=" container mx-auto  ">
+
+    <header>
+        <!-- Navber section -->
+        <div class="navbar mt-5">
+            <div class="flex-1">
+                <h1 class="text-4xl font-black ">MeTro</h1>
+            </div>
+            <div class=" gap-6">
+                <div class=" hidden md:flex lg:flex gap-6 ">
+
+                    <div class="tooltip" data-tip="home">
+                        <img src="icon/home.png">
+                    </div>
+
+                    <div class="tooltip" data-tip="Account">
+                        <img src="icon/men.png">
+                    </div>
+
+                    <div class="tooltip" data-tip="Edit">
+                        <img src="icon/pen.png">
+                    </div>
+
+                    <div class="tooltip" data-tip="Complain">
+
+                        <img src="icon/flag.png">
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <button class=" hover:bg-gray-400 rounded-[50px] bg-[#797DFC]  px-6 py-1">Sign In</button>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- Banner section -->
+        <div
+            class=" lg:h-[550px]  lg:w-full  rounded-3xl lg:flex  justify-around  items-center text-white  bg-[url('images/bgbanner.png')] bg-no-repeat bg-[#12132D] bg-cover mt-10   lg:space-y-6 space-y-2 p-1">
+
+
+            <div class="  lg:space-y-6 space-y-3">
+                <h1 class="lg:text-[64px] text-[50px]   font-black font-muslish  ">Welcome to the <br> <span style="background: #A7CFDF;
+                    background: linear-gradient(to right, #A7CFDF 0%, #797DFC 0.63%, #23538A 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;">MeTro </span> Forum</h1>
+                <p class="text-[20px] font-medium font-muslish">Share your favorite opinion and win and wp <br> forum
+                    coffee mug!</p>
+
+
+                <input type="text" class="w-full max-w-xs rounded-l-2xl border py-4 p-4"
+                    placeholder="Search here anything">
+                <button class=" border rounded-r-2xl bg-[#797DFC] -mx-2 py-4 px-4 hover:bg-violet-500">Search</button>
+
+
+
+            </div>
+
+
+
+
+
+            <div class=" flex justify-around items-center bg-white text-black lg:h-80   lg:w-[500px]  rounded-3xl  ">
+
+                <div class="font-medium lg:text-[24px] text-[#0c0d2d80]">
+                    <p>Registered Users</p>
+                    <p>Forum</p>
+                    <p>Topics</p>
+                    <p>Replies</p>
+                </div>
+
+                <div class="font-medium lg:text-[24px] text-[#0c0d2d80]">
+                    <p>01</p>
+                    <p>05</p>
+                    <p>01</p>
+                    <p>01</p>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+    <main class="mt-24">
+
+        <section>
+            <div class="text-center space-y-6">
+
+                <h1 class="text-4xl font-black font-muslish">Let’s Discuss</h1>
+                <p class="font-medium text-[18px] font-inter text-[#0c0d2d99]">Yes, you can run unit tests and view the
+                    results directly within the app. The <br>
+                    integrated testing features
+                    allow for a streamlined .</p>
+
+            </div>
+        </section>
+
+
+
+        <section class=" mt-8 flex justify-between gap-6 ">
+
+            <div class="bg-[#4F7DFC1A]    w-[70%]  h-72 rounded-3xl 
+            border-[#797DFC] border-solid border-2 px-10 py-10">
+
+                <div class="flex gap-6 border-2">
+                    <div class="w-[72px] h-[72px] ">
+                        <img src="images/joinforum.png" alt="">
+                    </div>
+                    <div class="">
+                        <div class="flex gap-5">
+                            <p class="font-medium text-[14px] text-[#0c0d2dcc]"># Music</p>
+                            <p class="font-medium text-[14px] text-[#0c0d2dcc]">Author : Awlad Hossain</p>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-[20px] text-[#12132D] font-muslish"> 10 Kids Unaware of Their
+                                Halloween Costume
+                            </h1>
+                            <p class="font-muslish text-[16px] text-[#0c0d2d99]"> It’s one thing to subject yourself to
+                                ha
+                                Halloween costume mishap because, <br>
+                                hey that’s your
+                                prerogative</p>
+                            <hr>
+                        </div>
+
+                       
+                        <div class="flex gap-6">
+                            <div class="flex items-center gap-4">
+                                <img src="icon/message.png" alt="">
+                                <p>600</p>
+                            </div>
+            
+                            <div class="flex items-center gap-4">
+            
+                                <img src="icon/icon-eye.png" alt="">
+                                <p>1500</p>
+                            </div>
+            
+                            <div class="flex items-center gap-4 ">
+            
+                                <img src="icon/clock-hour.png" alt="">
+                                <p>5 minit</p>
+                            </div>
+            
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                
+
+
+            </div>
+
+          
+
+
+            <div class="bg-[#0c0d2d0d] rounded-[24px] w-[30%] px-10 py-6">
+                <div class="flex justify-between items-center">
+                    <h2>Title</h2>
+
+                    <div class="flex">
+                        <img src="icon/Frame (11).png" alt="">
+                        <p>Mark as read (4)</p>
+                    </div>
+
+                </div>
+
+                <div class=" bg-white h-20   mx-auto rounded-3xl mt-[20px]">
+                    <div class="flex justify-between p-4  font-semibold text-[16px] text-[#12132D]">
+                        <p>10 Kids Unaware of Their <br>
+                            Halloween Costume</p>
+
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="icon/icon-eye.png" alt="">
+                            <p>1,568</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer>
+
+
+    </footer>
+
     <script src="js/retro.js"></script>
 </body>
+
 </html>
