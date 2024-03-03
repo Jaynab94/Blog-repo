@@ -62,21 +62,25 @@
 
         <!-- Banner section -->
         <div
-            class=" lg:h-[550px]  lg:w-full  rounded-3xl lg:flex  justify-around  items-center text-white  bg-[url('images/bgbanner.png')] bg-no-repeat bg-[#12132D] bg-cover mt-10   lg:space-y-6 space-y-2 p-1">
+            class=" lg:h-[550px]  lg:w-full  rounded-3xl lg:flex  justify-around  items-center   bg-[url('images/bgbanner.png')] bg-no-repeat bg-[#12132D] bg-cover mt-10   lg:space-y-6 space-y-2 p-1">
 
 
             <div class="  lg:space-y-6 space-y-3">
-                <h1 class="lg:text-[64px] text-[50px]   font-black font-muslish  ">Welcome to the <br> <span style="background: #A7CFDF;
+                <h1 class="lg:text-[64px] text-[50px]   font-black font-muslish text-white  ">Welcome to the <br> <span
+                        style="background: #A7CFDF;
                     background: linear-gradient(to right, #A7CFDF 0%, #797DFC 0.63%, #23538A 100%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;">MeTro </span> Forum</h1>
-                <p class="text-[20px] font-medium font-muslish">Share your favorite opinion and win and wp <br> forum
-                    coffee mug!</p>
+                <p class="text-[20px] font-medium font-muslish  text-white  ">Share your favorite opinion and win and wp
+                    <br> forum
+                    coffee mug!
+                </p>
 
 
-                <input type="text" class="lg:w-full max-w-xs rounded-l-2xl border py-4 p-4"
+                <input id="input-field" type="text" class="lg:w-full max-w-xs rounded-l-2xl border py-4 p-4"
                     placeholder="Search here anything">
-                <button
+
+                <button onclick="handleSearch()"
                     class=" border rounded-r-2xl bg-[#797DFC] lg:-mx-2 py-4 px-4 hover:bg-violet-500">Search</button>
 
 
@@ -114,8 +118,15 @@
 
 
     </header>
+    <div id="loding-spiner"  class="text-center hidden "> <span class="loading  loading-dots loading-lg"></span>
+    </div>
 
+    <!-- loader -->
+    
+    
     <main class="mt-24">
+
+       
         <div>
             <h1 class="text-4xl font-black font-muslish text-center">Let’s Discuss</h1>
             <p class="font-medium text-[18px] font-inter text-[#0c0d2d99] text-center mt-4">Yes, you can run unit tests
@@ -131,10 +142,10 @@
 
         <section class=" mt-8 lg:flex  gap-6  ">
 
-            <div class="bg-[#4F7DFC1A]    lg:w-[60%] h-[270px]  rounded-3xl 
-            border-[#797DFC] border-solid border-2 lg:p-10  ">
+            <div id="card-container" class="    lg:w-[60%]  rounded-3xl 
+             border-solid border-2 lg:p-10  ">
 
-                <div class="flex gap-6">
+                <!-- <div class="flex gap-6">
 
 
                     <div class="w-[80px] h-[80px] bg-yellow-300 rounded-3xl">
@@ -174,16 +185,21 @@
                                 <img src="icon/clock-hour.png" alt="">
                                 <p class="font-inter text-[16px] text-[#12132D99] font-medium"> 5 minit</p>
                             </div>
+                            
                         </div>
                     </div>
 
-                </div>
+                </div> -->
 
+
+                <!-- <div class="translate-x-28"><img src="icon/email 1.png" alt="">> -->
 
             </div>
 
 
-            <div class="bg-[#0c0d2d0d] rounded-[24px] lg:w-[40%] w-full px-10 py-6">
+            <!-- second-card -->
+
+            <div class=" rounded-[24px] lg:w-[40%] w-full px-10 py-6">
                 <div class="flex justify-between items-center">
                     <h2 class="text-[20px] font-bold font-muslish">Title</h2>
 
@@ -205,8 +221,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
+
 
         </section>
 
@@ -230,8 +248,9 @@
 
 
         <!-- Latest post section -->
-        <section class="mt-24 ">
-            <div>
+        <section class="">
+
+            <div class="mt-8">
                 <h1 class="font-muslish text-[40px] font-black text-[#12132D] text-center">Latest
                     Posts</h1>
                 <p class="font-inter text-[18px] text-[#0c0d2d99] text-center">Yes, you can run unit tests and view the
@@ -241,33 +260,21 @@
             </div>
 
 
-            <div class="card w-96 bg-base-100 shadow-xl my-10 ">
-                <figure class="px-10 pt-10">
-                    <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                </figure>
-                <div class="card-body space-y-4 ">
-                    <div class="flex gap-2">
-                        <img src="icon/Frame (12).png" alt="">
-                        <h2>29 January 2024</h2>
-                    </div>
-                    <h2 class="card-title">What will a mars habitat force that impact in our daily life!!!</h2>
-                    <p>Yes, you can run unit tests and view the results directly within the app. </p>
-                    <div class="flex gap-4">
-                        <img src="icon/men.png" alt="">
-                        <div>
-                            <p>Cameron Williamson</p>
-                            <p>Unknown</p>
-                        </div>
-                    </div>
+            <div class="mt-8">
+                <div id="letest-post-container" class="lg:flex flex-row gap-5 ">
+
+
+
+
+
                 </div>
             </div>
         </section>
     </main>
 
 
-
-    <footer class="footer footer-center  bg-[#F3F3F5]  text-primary-content mb-10 mt-24 p-16">
+    <!-- footer section -->
+    <footer class="footer footer-center   bg-[#F3F3F5]  text-primary-content mb-10 mt-24 p-16">
         <aside>
             <img src="images/logo.png" alt="">
 
