@@ -17,7 +17,7 @@ const displayCard = (posts) => {
         // creat a div
 
         const postCard = document.createElement('div');
-        postCard.classList = ` bg-[#F5F5DC]  lg:w-full  rounded-3xl 
+        postCard.classList = ` bg-[#F5F5DC] lg:w-full  rounded-3xl 
         border-[#797DFC]  border-2 lg:p-10 gap-10 mt-6 ) `
         // 
         postCard.innerHTML = `
@@ -63,7 +63,7 @@ const displayCard = (posts) => {
                         <p class="font-inter text-[16px] text-[#12132D99] font-medium">${post.posted_time} </p>
                     </div>
 
-                    <div class="translate-x-72"><img src="icon/email 1.png" alt="">
+                    <div id="email-button" class="translate-x-72"><button class="allBtn" btn-ghost"> <img src="icon/email 1.png"></button>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@ const displayLetestPost = (letestPost) => {
     const letestPostContainer = document.getElementById('letest-post-container');
     // console.log(letestPost);
     letestPost.forEach(letest => {
-        console.log(letest.title);
+        // console.log(letest.title);
 
         // div creat
         const letestPostCard = document.createElement('div');
@@ -110,7 +110,7 @@ const displayLetestPost = (letestPost) => {
     <div class="card-body space-y-4 ">
         <div class="flex gap-2">
             <img src="icon/Frame (12).png" alt="">
-            <h2>${letest.author?.posted_date? letest.author?.posted_date:'No publish date'}</h2>
+            <h2>${letest.author?.posted_date ? letest.author?.posted_date : 'No publish date'}</h2>
         </div>
         <h2 class="card-title font-bold font-muslish">${letest.title}</h2>
         <p class="font-muslish text-[16px] text-[#12132D99]">${letest.description} </p>
@@ -120,7 +120,7 @@ const displayLetestPost = (letestPost) => {
             <div>
                 <p class="font-semibold font-mushlish text-[16px] text-[#12132D]">${letest.author.name}</p>
 
-                <p>${letest.author?.designation?letest.author.designation:'unknown'}</p>
+                <p>${letest.author?.designation ? letest.author.designation : 'unknown'}</p>
             </div>
         </div>
     </div>
@@ -162,3 +162,52 @@ const handleSearch = () => {
 
 loadPost();
 loadLestestPost();
+
+
+// const addPost = async () => {
+//     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+//     const data = await res.json();
+//     const allData = data.posts;
+//     displaySecondPost(allData);
+
+
+// }
+
+// const displaySecondPost = (allData) => {
+//     const secondDiv = document.getElementById('second-div');
+//     allData.forEach(post => {
+//         post.
+//         const secondPostDiv = document.createElement('div');
+//         secondPostDiv.classList = `bg-[#12132D0D] border-2 rounded-[24px] lg:w-[40%] h-[500px]  px-10 py-6`;
+//         secondPostDiv.innerHTML = ` <div class="flex justify-between items-center">
+//        <h2 class="text-[20px] font-bold font-muslish">Title</h2>
+
+//        <div class="flex">
+//            <img src="icon/Frame (11).png" alt="">
+//            <p class="text-[16px] font-muslish font-normal text-[#12132D99]">Mark as read <span id="mark-read-count">(4)</span> </p>
+//        </div>
+
+//    </div>
+
+//    <div class=" bg-white h-20   mx-auto rounded-3xl mt-[20px]">
+//        <div class="flex justify-between p-4  font-semibold text-[16px] text-[#12132D]">
+//            <p>10 Kids Unaware of Their <br>
+//                Halloween Costume</p>
+
+//            <div class="flex justify-center items-center gap-2">
+//                <img src="icon/icon-eye.png" alt="">
+//                <p>1,568</p>
+//            </div>
+//        </div>
+//    </div> `;
+//         secondDiv.appendChild(secondPostDiv);
+//     });
+// }
+
+const allBtn = Document.getElementById('email-button');
+for (btn of allBtn) {
+    allBtn.addEventListener('click', function (event) {
+        const title = event.target.parentanode;
+
+    })
+}
