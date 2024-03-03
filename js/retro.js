@@ -4,7 +4,7 @@ const loadPost = async (inputCategory = "") => {
     const data = await res.json();
     const posts = data.posts;
     // console.log(posts);
-    displayCard(posts)
+    displayCard(posts);
 }
 
 
@@ -110,7 +110,7 @@ const displayLetestPost = (letestPost) => {
     <div class="card-body space-y-4 ">
         <div class="flex gap-2">
             <img src="icon/Frame (12).png" alt="">
-            <h2>${letest.author.posted_date}</h2>
+            <h2>${letest.author?.posted_date? letest.author?.posted_date:'No publish date'}</h2>
         </div>
         <h2 class="card-title font-bold font-muslish">${letest.title}</h2>
         <p class="font-muslish text-[16px] text-[#12132D99]">${letest.description} </p>
@@ -119,7 +119,8 @@ const displayLetestPost = (letestPost) => {
 
             <div>
                 <p class="font-semibold font-mushlish text-[16px] text-[#12132D]">${letest.author.name}</p>
-                <p>${letest.author.designation}</p>
+
+                <p>${letest.author?.designation?letest.author.designation:'unknown'}</p>
             </div>
         </div>
     </div>
