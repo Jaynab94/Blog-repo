@@ -3,7 +3,7 @@ const loadPost = async (inputCategory = "") => {
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputCategory}`);
     const data = await res.json();
     const posts = data.posts;
-    console.log(posts.isActive);
+    // console.log(posts.isActive);
     displayCard(posts);
 }
 
@@ -17,7 +17,7 @@ const displayCard = (posts) => {
         // creat a div
 
         const postCard = document.createElement('div');
-        postCard.classList = ` bg-[#F5F5DC] lg:w-full flex  rounded-3xl 
+        postCard.classList = `hover:bg-slate-200 bg-[#F5F5DC] lg:w-full flex  rounded-3xl 
         border-[#797DFC]  border-2 lg:p-10 gap-10 mt-6 "bg-green": ) `
         // 
         postCard.innerHTML = `
@@ -68,8 +68,8 @@ const displayCard = (posts) => {
                         <p class="font-inter text-[16px] text-[#12132D99] font-medium">${post.posted_time} </p>
                     </div>
 
-                    <div id="email-button" class="translate-x-48">
-                    <button onclick="openPost('${post.title}','${post.view_count}')" class="allBtn" btn-ghost"> <img src="icon/email 1.png"></button>
+                    <div id="email-button" class="lg:translate-x-48">
+                    <button onclick="loadPost2('${post.title}','${post.view_count}')" class="allBtn" btn-ghost"> <img src="icon/email 1.png"></button>
                 </div>
             </div>
 
@@ -104,7 +104,7 @@ const displayLetestPost = (letestPost) => {
         // div creat
         const letestPostCard = document.createElement('div');
         letestPostCard.classList = `
-          lg:w-full  bg-base-100 shadow-xl my-10 rounded-3xl border-2  
+        hover:bg-slate-200 lg:w-full  bg-base-100 shadow-xl my-10 rounded-3xl border-2  
         `
 
         letestPostCard.innerHTML = `
@@ -171,8 +171,54 @@ const handleSearch = () => {
 
 // openpost
 
-const openPost = (title, view_count) => {
-    console.log('ha connect paisi')
+const loadPost2 = async (title1, view1) => {
+
+    // const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
+    // const data = await res.json();
+    // const title = data.posts[0].title;
+    // const view = data.posts[0].view_count;
+    // console.log(title)
+    // console.log(view)
+    openPost(title1, view1);
+}
+
+
+
+
+const openPost = (title1,view1 ) => {
+
+
+    const secondDiv = document.getElementById('second-div');
+    const newPostDiv = document.createElement('div');
+    newPostDiv.classList = `card w-full  bg-base-100 shadow-xl mt-5`
+    newPostDiv.innerHTML = `
+  
+    <div class="card w-full  bg-base-100 shadow-xl ">
+    <div class="flex  items-center justify-around  py-10 px-4">
+        <h2 class="card-title">${title1}</h2>
+
+        <div class="card-actions flex items-center gap-4">
+            <img src="icon/icon-eye.png" alt="">
+            <p class="text-2xl font-inter font-medium text-[#12132D99]">${view1}</p>
+        </div>
+    </div>
+</div>
+    `;
+
+    secondDiv.appendChild(newPostDiv);
+
+    const markReadCount = document.getElementById('mark-read-count');
+    const newValue = markReadCount.innerText = + 1;
+
+
+
+
+    // console.log(markReadCount.innerText)
+    // const newValue = markReadCount.innerText;
+
+
+
+
 
 
 }
@@ -180,5 +226,6 @@ const openPost = (title, view_count) => {
 
 loadPost();
 loadLestestPost();
-openPost();
+// loadPost2();
+
 
